@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Profile Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color:MidnightBlue">Profile Management System</h1>
+        <hr>
+        <h2 style="color:MediumPurple">Save Profile</h2>
+
+       <div class="container  P-1">
+       <div class="row">
+       
+       <div class="col-md-6 offset-md-3">
+       <div class="card">
+       <div class="card-body">
+       <h4 class="text-center text-primary">Add New Profile</h4>
+						       <form  th:action="@{/saveProfile}" th:object="${emp}" method="POST">
+						       <div class="form-group">
+						       <lable>Enter  Name</lable>
+						       <input type="text" class="form-control" name="name">
+						      	</div>
+						      	 <div class="form-group">
+						       <lable>Enter Father Name</lable>
+						       <input type="text" class="form-control" name="father">
+						      	</div>
+						      	 <div class="form-group">
+						       <lable>Enter Mother  Name</lable>
+						       <input type="text" class="form-control" name="mother">
+						      	</div>
+						      	 <div class="form-group">
+						       <lable>Enter Mobile No</lable>
+						       <input type="text" class="form-control" name="number">
+						      	</div>
+						      	 <div class="form-group">
+						       <lable>Enter Email</lable>
+						       <input type="email" class="form-control" name="email">
+						      	</div>
+						      	 <div class="form-group">
+						       <lable>Enter  Country</lable>
+						       <input type="text" class="form-control" name="country">
+						      	</div>
+						      
+						      	
+						      	<button class="btn btn-primary btn-block" type="submit">Submit</button>
+						       
+						       </form>
+       
+       </div>
+       
+       </div>
+       
+       
+       </div>
+       
+       </div>
+       
+       
+       </div>
+       
+       
+
+        <hr>
+
+        <a class="btn bg-success text-white" th:href="@{/}"> Back to Profile List</a>
+    </div>
+</body>
+
+</html>
